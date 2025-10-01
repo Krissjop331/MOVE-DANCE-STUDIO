@@ -1,0 +1,35 @@
+.footer {
+    border-top: 1px solid #4D4D4D;
+    background: #171717;
+    padding: 50px 0;
+}
+
+.footer_menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.footer-etc {
+    display: flex;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.footer-etc p:not(:last-child) {
+    margin-right: 50px;
+}
+
+.Privacy {
+    display: flex;
+}
+
+.Privacy p:hover {
+    color: #B481FF;
+    transition: all 0.3s;
+}
+
+.Privacy p:not(:last-child) {
+    margin-right: 24px;
+}

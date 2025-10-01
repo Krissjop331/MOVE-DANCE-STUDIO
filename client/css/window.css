@@ -1,0 +1,186 @@
+.wrapper-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #00000055;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}   
+
+.wrapper-container .active + body {
+    overflow: hidden;
+}
+
+.wrapper-container .container {
+    border: 3px solid #fff;
+    background: #1C1C1C;
+    width: 70vw;
+    padding: 80px 50px;
+    top: 20%;   
+    border-radius: 30px;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
+    opacity: 0;
+}
+
+.wrapper-container.active {
+    opacity: 1;
+    visibility: visible;
+    transition: all .2s ease-in-out;
+}
+
+.wrapper-container.active .container {
+    opacity: 1; 
+    transition: all .5s ease-in-out;
+}
+
+.wrapper-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wrapper-container:not(.active) {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0s ease-in-out;
+}
+
+.wrapper-container .container  h1 {
+    margin-bottom: 50px;
+    font-size: 49px;
+}
+
+
+
+
+
+
+/* CONTACTS */
+
+
+
+.info,
+.info__social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.info {
+    gap: 30px;
+}
+
+.info a,
+.info a svg {
+    transition: all .3s ease-out;
+}
+
+.info a:hover,
+.info a:hover svg {
+    color: #B481FF;
+    fill: #B481FF;
+}
+
+.info a:active,
+.info a:active svg {
+    color: #EA5FB5;
+    fill: #EA5FB5;
+}
+
+.info__social {
+    gap: 50px;
+}
+
+
+.info-icon {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.info-icon svg{
+    width: 35px;
+    height: 35px;
+    fill: #B8B8B8;
+}
+
+
+
+
+
+
+/* SIGN-IN */
+.input,
+.input form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input {
+    gap: 50px;
+}
+.input form {
+    gap: 35px;
+}
+
+.input .buttons  {
+    width: 300px;
+    font-size: 18px;
+}
+
+.input div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+
+.input form input {
+    width: 30vw;
+    height: 20px;
+    border-radius: 30px;
+    border: 2px solid #ffff;
+    background: #1A1A1A;
+    color: #fff;
+    padding: 25px 20px;
+    font-size: 20px;
+    outline: none;
+    transition: all .3s ease-in;
+}
+.input form input:hover,
+.input form input:focus {
+    border: 2px solid #EA5FB5;
+}
+
+.reg .container {
+    padding: 50px 50px;
+    top: 15%;   
+}
+
+
+
+@media screen and (max-width: 1300px) {
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 550px) {
+        .info__social {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
+
